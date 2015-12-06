@@ -2,10 +2,11 @@
 layout: default
 title: layout
 ---
-* TOC
-{:toc}
 
 <http://learnlayout.com>
+
+* TOC
+{:toc}
 
 # display
 ---
