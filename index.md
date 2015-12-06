@@ -2,6 +2,10 @@
 layout: default
 ---
 
-{% for page in site.pages %}
-	<a href="{{ page.url }}">{{ page.url }}</a>
+<ul>
+{% for page in site.pages where %}
+	{% if page.url != "/" %}
+		<li><a href="{{ page.url }}">{{ page.url }}</a></li>
+	{% endif %}
 {% endfor %}
+</ul>
