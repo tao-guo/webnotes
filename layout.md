@@ -2,6 +2,8 @@
 layout: default
 title: layout
 ---
+* TOC
+{:toc}
 
 <http://learnlayout.com>
 
