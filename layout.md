@@ -32,7 +32,7 @@ title: layout
   - 需要设置width
   - columes之间有空隙?
 
-- flex
+- [flex](#flexbox)
 - display属性可以被重载，比如li常重载inline作menu使用
 
 # the box model
