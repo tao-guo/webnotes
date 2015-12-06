@@ -1,5 +1,6 @@
 ---
 layout: default
+title: web learning notes
 ---
 
 <ul>

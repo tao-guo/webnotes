@@ -1,3 +1,7 @@
+html {
+   height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -6,6 +10,7 @@ body {
   font: 16px;
   line-height: 1.5;
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  min-height: 100%;
 }
 
 /* General & 'Reset' Stuff */

@@ -1,5 +1,6 @@
 ---
 layout: default
+title: layout
 ---
 
 <http://learnlayout.com>
