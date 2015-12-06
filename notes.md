@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <http://learnlayout.com>
 
 # display
