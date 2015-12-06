@@ -52,7 +52,9 @@ title: For web novice
 
 # 静态网站框架
 ---
+
 对比
+
 - CMS (wordpress, drupal, google sites...)
     - No full control, just plugin
     - not stardard web language
