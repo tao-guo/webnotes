@@ -1,2 +1,3 @@
-site-name: "webnotes"
+baseurl: "webnotes"
+url: "http://tao-guo.github.io/"
 permalink: pretty
