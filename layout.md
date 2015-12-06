@@ -56,19 +56,30 @@ title: layout
   - 默认值
 - relative
   - 需要指定其它属性，比如top, left, width
+  - 元素原来占的空间还在
 - fixed
   - 相对于viewport而言的位置
   - 移动设备需要额外的代码<http://bradfrostweb.com/blog/mobile/fixed-position/>
 - absolute
   - 相对直系positioned元素位置是固定的,无则相对于body
   - 任何非static元素都是positioned元素
-- 例子
+- Example
 <pre><code>
   container: relative
   nav: absolute
   section: static/default
   footer: fixed
 </code></pre>
+- Extra
+  - <http://nigelbuckner.com/downloads/handouts/web/pos-explained/index.html>
+    - 含直观视图
+  - <http://developer.51cto.com/art/201009/225201_all.htm>
+    - relative与absolute的主要区别
+      - 正常流中的位置存在与否
+      - 定位相对层
+        - relative定位的层总是相对于其最近的父元素，无论其父元素是何种定位方式
+        - absolute定位的层总是相对于其最近的定义为absolute或relative的父层，而这个父层并不一定是其直接父层。如果其父层中都未定义absolute或relative，则其将相对body进行定位
+    - margin属性值的定义也符合上述规则
 
 # float & clean
 ---
