@@ -10,6 +10,15 @@ title: For web novice
 * TOC
 {:toc}
 
+# Why
+- 需求
+  - <http://jjperezaguinaga.com/2014/03/19/why-cant-we-find-front-end-developers/>
+  - Web startup
+- fullstack趋势
+  - nodejs, js everywhere
+  - recent reactnative, chrome plugin ...
+  - html5标准化(websocket, canvas, ...),原来传统的技术可以用在web上了
+
 # html入门
 ---
 
@@ -49,6 +58,10 @@ title: For web novice
 - <http://rmurphey.com/blog/2012/04/12/a-baseline-for-front-end-developers>
 - <https://github.com/christopherscott/frontend-toolbox>
 - <https://github.com/dypsilon/frontend-dev-bookmarks>
+
+## Day Day Up
+- <http://www.smashingmagazine.com/>
+- <https://css-tricks.com/>
 
 # 静态网站框架
 ---
