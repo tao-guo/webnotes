@@ -52,15 +52,23 @@ title: For web novice
 
 # 静态网站框架
 ---
+对比
+- CMS (wordpress, drupal, google sites...)
+    - No full control, just plugin
+    - not stardard web language
+- 可视化快速网站
+  - wix.com, ...
+  - 适合startup, 不适合用来开发和学习
 
 ## jekyll
 - <https://jekyllrb.com/>
 - 熟悉git和github流程
 - github pages直接托管和发布
-- markdown语法
-- html template
+- markdown语法, yml, [FrontMatter](http://jekyllrb.com/docs/frontmatter/)
+- html template: [liquid](https://github.com/Shopify/liquid/wiki)
 - layout, web components
 - 与动态网站开发流程类似,可以很容易开发出原型
+- 其他Static Site Generators: <https://staticsitegenerators.net/>
 
 # javascript
 ---
