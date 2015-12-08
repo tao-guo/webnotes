@@ -1,3 +1,9 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html {
    height: 100%;
 }
@@ -15,12 +21,10 @@ body {
 
 /* General & 'Reset' Stuff */
 
-@media only screen and (min-width: 768px) {
-  .container {
-    width: 90%;
-    max-width: 800px;
-    margin: 0 auto;
-  }
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 section {

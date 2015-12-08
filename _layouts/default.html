@@ -7,7 +7,7 @@
 
     <header>
       <div class="container">
-        <a href="{% if site.baseurl %} {{ site.baseurl }} {% else %} / {% endif %}"><h1>Webnotes</h1></a>
+        <a href="{% if site.baseurl != "" %} {{ site.baseurl }} {% else %} / {% endif %}"><h1>Webnotes</h1></a>
         <h2>My web learning notes</h2>
 
       </div>
