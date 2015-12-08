@@ -15,10 +15,12 @@ body {
 
 /* General & 'Reset' Stuff */
 
-.container {
-  width: 90%;
-  max-width: 600px;
-  margin: 0 auto;
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
 }
 
 section {
