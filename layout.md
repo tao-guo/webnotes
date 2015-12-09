@@ -37,18 +37,19 @@ title: layout
 
 # the box model
 ---
-- margin, border, padding
-  - mozilla和chrome的开发窗口很容易查看
-
-<pre><code>
-* {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
-</code></pre>
-
-这样width不会因border和padding而变化
+- margin, border & padding:
+  - [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model): CSS Box Model
+- devtools
+  - mozilla和chrome的开发窗口很容易[查看](https://hacks.mozilla.org/2014/05/editable-box-model-multiple-selection-sublime-text-keys-much-more-firefox-developer-tools-episode-31/)
+- border-box
+  - width不会因border和padding而变化
+  <pre><code>
+  * {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  </code></pre>
 
 # position
 ---
@@ -64,12 +65,12 @@ title: layout
   - 相对直系positioned元素位置是固定的,无则相对于body
   - 任何非static元素都是positioned元素
 - Example
-<pre><code>
-  container: relative
-  nav: absolute
-  section: static/default
-  footer: fixed
-</code></pre>
+  <pre><code>
+    container: relative
+    nav: absolute
+    section: static/default
+    footer: fixed
+  </code></pre>
 - Extra
   - [直观视图](http://nigelbuckner.com/downloads/handouts/web/pos-explained/index.html)
   - [relative与absolute的主要区别](http://developer.51cto.com/art/201009/225201_all.htm)
