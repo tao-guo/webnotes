@@ -19,12 +19,35 @@ body {
   min-height: 100%;
 }
 
-/* General & 'Reset' Stuff */
-
 .container {
-  width: 90%;
-  max-width: 800px;
-  margin: 0 auto;
+  box-sizing: border-box;
+  max-width: 980px;
+  padding: 0 25px;
+}
+/* Large screen and bigger */
+@media (min-width: 1220px) {
+  .container {
+    max-width: 1200px;
+    padding: 0 35px;
+  }
+}
+/*
+ * Micro clearfix
+ */
+.container:before,
+.container:after {
+  content: "";
+  display: table;
+}
+.container:after {
+  clear: both;
+}
+/*
+ * Center container
+ */
+.container-center {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 section {
