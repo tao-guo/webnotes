@@ -12,7 +12,7 @@ title: For web novice
 
 # Why
 - 需求
-  - <http://jjperezaguinaga.com/2014/03/19/why-cant-we-find-front-end-developers/>
+  - [find-front-end-dev](http://jjperezaguinaga.com/2014/03/19/why-cant-we-find-front-end-developers/)
   - Web startup
 - fullstack趋势
   - nodejs, js everywhere
@@ -55,9 +55,9 @@ title: For web novice
 ### uikit
 
 ## web开发书签和资料列表
-- <http://rmurphey.com/blog/2012/04/12/a-baseline-for-front-end-developers>
-- <https://github.com/christopherscott/frontend-toolbox>
-- <https://github.com/dypsilon/frontend-dev-bookmarks>
+- [a-baseline-for-front-end-developers](http://rmurphey.com/blog/2012/04/12/a-baseline-for-front-end-developers)
+- [frontend-toolbox](https://github.com/christopherscott/frontend-toolbox)
+- [frontend-bookmarks](https://github.com/dypsilon/frontend-dev-bookmarks)
 
 ## Day Day Up
 - <http://www.smashingmagazine.com/>
