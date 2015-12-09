@@ -62,6 +62,7 @@ title: For web novice
 ## Day Day Up
 - <http://www.smashingmagazine.com/>
 - <https://css-tricks.com/>
+- [Hacker News Web Related](https://news.ycombinator.com/)
 
 # 静态网站框架
 ---
