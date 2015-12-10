@@ -50,6 +50,7 @@ title: layout
             box-sizing: border-box;
   }
   </code></pre>
+- border-radius
 
 # position
 ---
