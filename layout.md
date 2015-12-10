@@ -33,7 +33,7 @@ title: layout
   - columes之间有空隙?
 
 - [flex](#flexbox)
-- display属性可以被重载，比如li常重载inline作menu使用
+- display属性可以被重载，比如li常重载inline作menu使用 (list-style: none;)
 
 # the box model
 ---

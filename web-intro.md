@@ -29,8 +29,9 @@ title: For web novice
   - 非常适合初学者入门
   - 将web与乐高积木对比
   - css与房屋粉刷对比
-  - theverge.com作示范
+  - [theverge](http://theverge.com)作示范
     - 亲自打开网站,用浏览器的Inspect Element右键菜单配合查看更好
+  - 最后章节很多有用的链接
 
 ## Mozilla thimble
 - <https://thimble.mozilla.org/>
