@@ -45,7 +45,7 @@ title: For web novice
 ## MDN
 - <https://developer.mozilla.org/en-US/docs/Web>
 - 互联网的手册
-- 尽量加mdn关键字进行google,少使用w3cshool
+- 尽量加mdn关键字进行google,少使用w3school
 
 ## css库
 
