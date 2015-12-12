@@ -5,6 +5,8 @@ title: waiianairlines case study
 
 <http://www.smashingmagazine.com/2015/12/lessons-learned-in-big-app-development-hawaiian-airlines>
 
+<https://www.hawaiianairlines.com/>
+
 * TOC
 {:toc}
 
@@ -48,6 +50,9 @@ title: waiianairlines case study
 - [paradigm shift](http://stackoverflow.com/questions/14994391/thinking-in-angularjs-if-i-have-a-jquery-background)
 - Good for custom UI components
 - Think about AngularJS directives more as self-contained web components with an API
+- UI
+  - [Angular Bootstrap Typeahead directive](https://angular-ui.github.io/bootstrap/)
+  - modify it quite extensively
 - Performance
   - data-binds with cost
   - [tool to monitor AngularJS performance](https://github.com/blndspt/ngPerformance)
@@ -78,7 +83,7 @@ title: waiianairlines case study
 ## Pattern Consistency
 - consistency for learning curves and productivity
 - UI Docs
-  - Yeoman, built and maintained itself -- jekyll
+  - Yeoman, built and maintained itself -- YuiDoc, jekyll
 - Code Reviews
   - not merge until at least one team member had reviewed and approved it.
 - guidelines
