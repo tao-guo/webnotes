@@ -19,6 +19,9 @@ title: CSS
 # OOCSS & BEM
 - <http://oocss.org/>
 - <http://getbem.com/introduction/>
+- Atomic
+  - <http://www.smashingmagazine.com/2013/10/challenging-css-best-practices-atomic-approach/>
+  - <http://www.jon.gold/2015/07/functional-css/>
 
 # icon & animation
 - <https://github.com/cssmagic/blog/issues/52>
@@ -29,3 +32,6 @@ title: CSS
 
 # FAQ
 - <http://stackoverflow.com/questions/tagged/css?sort=frequent&pageSize=15>
+
+# Blogs
+- <https://blog.colepeters.com/building-and-shipping-functional-css/>
