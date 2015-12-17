@@ -22,6 +22,8 @@ title: CSS
 - Atomic
   - <http://www.smashingmagazine.com/2013/10/challenging-css-best-practices-atomic-approach/>
   - <http://www.jon.gold/2015/07/functional-css/>
+- Immutable
+  - linter: <https://github.com/johnotander/immutable-css>
 
 # icon & animation
 - <https://github.com/cssmagic/blog/issues/52>
@@ -39,6 +41,13 @@ title: CSS
 
 # Blogs
 - <https://blog.colepeters.com/building-and-shipping-functional-css/>
+- <http://eng.wealthfront.com/2013/08/functional-css-fcss.html>
+  - Everything is global scope.
+    - Use prefix naming
+  - Everything is mutable.
+  - The precedence of definitions is calculated based on some [interesting rules](http://www.w3.org/TR/css3-selectors/#specificity)
+    - Minimize dependencies
+  - smart css? : <https://github.com/hackhat/smart-css>
 
 # Twitters
 - <https://twitter.com/snookca>
