@@ -3,11 +3,15 @@ layout: default
 title: CSS
 ---
 
+![CSS IS AWESOME](http://i.imgur.com/OOHAWsb.jpg)
+
 * TOC
 {:toc}
 
 # Basic
 - <https://developer.mozilla.org/en-US/docs/Web/CSS>
+- <http://adamschwartz.co/magic-of-css/>
+- Funny: <https://www.reddit.com/r/ProgrammerHumor/comments/22xb60/i_hate_css/>
 
 # SASS & compass
 - <http://sass-lang.com/>
