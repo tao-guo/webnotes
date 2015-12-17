@@ -30,6 +30,10 @@ title: CSS
 - <https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations>
 - <https://daneden.github.io/animate.css/>
 
+# New Tech
+- CSS native variables
+  - <http://philipwalton.com/articles/why-im-excited-about-native-css-variables/>
+
 # FAQ
 - <http://stackoverflow.com/questions/tagged/css?sort=frequent&pageSize=15>
 
