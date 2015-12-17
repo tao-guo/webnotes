@@ -12,6 +12,7 @@ title: CSS
 - <https://developer.mozilla.org/en-US/docs/Web/CSS>
 - <http://adamschwartz.co/magic-of-css/>
 - Funny: <https://www.reddit.com/r/ProgrammerHumor/comments/22xb60/i_hate_css/>
+  - 2007: <http://www.ybrikman.com/writing/2007/11/01/i-hate-css/>
 
 # SASS & compass
 - <http://sass-lang.com/>
