@@ -21,6 +21,7 @@ title: CSS
 - <http://getbem.com/introduction/>
 
 # icon & animation
+- <https://github.com/cssmagic/blog/issues/52>
 - <https://css-tricks.com/examples/IconFont/>
 - <http://nicolasgallagher.com/pure-css-gui-icons/demo/>
 - <https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations>
