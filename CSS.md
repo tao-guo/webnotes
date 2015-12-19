@@ -42,7 +42,6 @@ title: CSS
   - <http://philipwalton.com/articles/why-im-excited-about-native-css-variables/>
 
 # FAQ
-- <http://stackoverflow.com/questions/tagged/css?sort=frequent&pageSize=15>
   - [Horizontally center a div in a div](http://stackoverflow.com/questions/114543/horizontally-center-a-div-in-a-div)
   - [How to vertically center a div for all browsers?](http://stackoverflow.com/questions/396145/how-to-vertically-center-a-div-for-all-browsers)
   - [How to align text vertically center in div with CSS?](http://stackoverflow.com/questions/8865458/how-to-align-text-vertically-center-in-div-with-css)
