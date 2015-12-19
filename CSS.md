@@ -48,14 +48,14 @@ title: CSS
   - [How to align text vertically center in div with CSS?](http://stackoverflow.com/questions/8865458/how-to-align-text-vertically-center-in-div-with-css)
   - [How to center an element horizontally and vertically?](http://stackoverflow.com/questions/19461521/how-to-center-an-element-horizontally-and-vertically)
   - [How to vertically align an image inside div](http://stackoverflow.com/questions/7273338/how-to-vertically-align-an-image-inside-div)
-  - [http://stackoverflow.com/questions/356809/best-way-to-center-a-div-on-a-page-vertically-and-horizontally](http://stackoverflow.com/questions/356809/best-way-to-center-a-div-on-a-page-vertically-and-horizontally)
+  - [Best way to center a <div> on a page vertically and horizontally?](http://stackoverflow.com/questions/356809/best-way-to-center-a-div-on-a-page-vertically-and-horizontally)
   - [Vertically align text next to an image?](http://stackoverflow.com/questions/489340/vertically-align-text-next-to-an-image)
   - [Retrieve the position (X,Y) of an HTML element](http://stackoverflow.com/questions/442404/retrieve-the-position-x-y-of-an-html-element)
   - [How do CSS triangles work?](http://stackoverflow.com/questions/7073484/how-do-css-triangles-work)
   - [Why do browsers match CSS selectors from right to left?](http://stackoverflow.com/questions/5797014/why-do-browsers-match-css-selectors-from-right-to-left)
   - [Stretch and scale a CSS image in the background - with CSS only](http://stackoverflow.com/questions/1150163/stretch-and-scale-a-css-image-in-the-background-with-css-only)
-  - <http://stackoverflow.com/questions/492809/when-to-use-img-vs-css-background-image>
-  - <http://stackoverflow.com/questions/806000/how-to-give-text-or-an-image-a-transparent-background-using-css>
+  - [When to use IMG vs. CSS background-image?](http://stackoverflow.com/questions/492809/when-to-use-img-vs-css-background-image)
+  - [How to give text or an image a transparent background using CSS?](http://stackoverflow.com/questions/806000/how-to-give-text-or-an-image-a-transparent-background-using-css)
 
 # Blogs
 - <https://blog.colepeters.com/building-and-shipping-functional-css/>
