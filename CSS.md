@@ -20,6 +20,11 @@ title: CSS
 
 # SMACSS
   - <https://smacss.com/>
+  - Resources
+    - <https://smacss.com/book/resources>
+    - Documentation
+      - <http://warpspire.com/posts/kss/>
+      - <http://24ways.org/2011/front-end-style-guides>
 
 # OOCSS & BEM
   - <http://oocss.org/>
