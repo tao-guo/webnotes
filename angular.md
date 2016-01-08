@@ -8,7 +8,7 @@ title: angular js
 
 # <https://docs.angularjs.org/tutorial>
 - angular-seed
-- step-0: &lt;html ng-app&gt;
+- step-0: <html ng-app>
 - step-2:
   - ng-app="phonecatApp"
   - body ng-controller="PhoneListCtrl"
@@ -16,9 +16,9 @@ title: angular js
   - li ng-repeat="phone in phones"
 - step-3:
   - ng-model="query"
-  - ng-repeat="phone in phones | filter:query"
+  - ng-repeat="phone in phones \| filter:query"
 - step-4:
-  - ng-repeat="phone in phones | filter:query | orderBy:orderProp"
+  - ng-repeat="phone in phones \| filter:query \| orderBy:orderProp"
   - $scope.orderProp = 'age';
 - step-5:
   - $http.get('phones/phones.json')
