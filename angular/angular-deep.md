@@ -26,3 +26,8 @@ title: angular internals
   - Dependency trees
   - Scope trees
 - 链接
+- Router
+
+# Lightweight AngularJS
+
+<http://blog.mgechev.com/2015/03/09/build-learn-your-own-light-lightweight-angularjs/>
