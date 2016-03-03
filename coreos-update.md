@@ -4,44 +4,48 @@ title: CoreOS notes
 permalink: /coreos
 ---
 
+* TOC
+{:toc}
+
 ## CoreOS Updates
 
-### FastPatch
+### [FastPatch](https://coreos.com/using-coreos/updates/)
 
-Continous stream of updates
+***Continous stream of updates***
 
-1. Operating System
+#### 1. Operating System
+
 - Access to public Update Service
 - All CoreOS customers get updates
-  - 3 release channels:
-    - stable<--beta<--alpha
-    - how to switch channels? higher version to lower version?
-  - Update strategies:
-    - `best-effort`, `etcd-lock`, `reboot`, `off`
-    - download to passive partition, so reboot is needed always
-    - why other strategies besides `reboot`:
-      - etcd-lock to make sure to get reboot lock, not losing quorum
-      - `locksmithctl` to change the lock
-    - How
-      - `update-engine` service do automatic update
-      - Manually tiggering an Update: `update_engine-client - check_for_update`
-      - Create service to make reboot only happen in Maintenance Window
-        - XXX: Could be better only do real update in Maintenance Window  
-  - Premium Managed Linux customers have access to panel: `CoreUpdate`
-    - Full control, reporting, downloading (Just GUI part?)
-    - Custom channels
-    - Using `Omaha` protocol developed by Google
-  - Recoverable System Upgrades
-    - Based on `ChromeOS`
-    - rootA/rootB, cgroups for QoS
-    - automatic rollback -- also in ChromeOS
-      - Record `tries` counter in partition table
-      - When to set the flag?
+ - Release channels
+   - stable <-- beta <-- alpha
+   - how to switch channels? higher version to lower version?
+ - Update strategies:
+   - `best-effort`, `etcd-lock`, `reboot`, `off`
+   - download to passive partition, so reboot is needed always
+   - why other strategies besides `reboot`:
+     - etcd-lock to make sure to get reboot lock, not losing quorum
+     - `locksmithctl` to change the reboot lock
+   - How
+     - `update-engine` service do automatic update
+     - Manually tiggering an Update: `update_engine-client - check_for_update`
+     - Create service to make reboot only happen in Maintenance Window
+       - XXX: Could be better only do real update in Maintenance Window  
+ - Premium Managed Linux customers have access to panel: `CoreUpdate`
+   - Full control, reporting, downloading (Just GUI part?)
+   - Custom channels
+   - Using `Omaha` protocol developed by Google
+ - Recoverable System Upgrades
+   - Based on `ChromeOS`
+   - rootA/rootB, cgroups for QoS
+   - automatic rollback -- also in ChromeOS
+     - Record `tries` counter in partition table
+     - When to set the flag?
 
-2. Application Code
+####2. Application Code
 - Update containers
 
-3. Configuration Values
+####3. Configuration Values
 - Traditionally: `Chef` or `Puppet`, can not audit the state
 - CoreOS uses `etcd`, each application listens the changes
 
@@ -58,63 +62,65 @@ Continous stream of updates
     - [Running a Chromium OS image under KVM](https://www.chromium.org/chromium-os/how-tos-and-troubleshooting/running-chromeos-image-under-virtual-machines)
 
 #### OS partitions layout
-- partitions
-  <pre>
-  core@coreos1 ~ $ sudo cgpt show /dev/vda
-         start        size    part  contents
-             0           1          Hybrid MBR
-             1           1          Pri GPT header
-             2          32          Pri GPT table
-          4096      262144       1  Label: "EFI-SYSTEM"
-                                    Type: EFI System Partition
-                                    UUID: 4E5F1B27-B7A2-4F17-B1CD-A97A6DE38722
-                                    Attr: Legacy BIOS Bootable
-        266240        4096       2  Label: "BIOS-BOOT"
-                                    Type: BIOS Boot Partition
-                                    UUID: 689F6981-D078-4D19-AD44-A931FB689996
-        270336     2097152       3  Label: "USR-A"
-                                    Type: Alias for coreos-rootfs
-                                    UUID: 7130C94A-213A-4E5A-8E26-6CCE9662F132
-                                    Attr: priority=1 tries=0 successful=1
-       2367488     2097152       4  Label: "USR-B"
-                                    Type: Alias for coreos-rootfs
-                                    UUID: E03DD35C-7C2D-4A47-B3FE-27F15780A57C
-                                    Attr: priority=0 tries=0 successful=0
-       4464640      262144       6  Label: "OEM"
-                                    Type: Alias for linux-data
-                                    UUID: 8C689B68-EF14-4E73-AB41-28C33540ADF4
-       4726784      131072       7  Label: "OEM-CONFIG"
-                                    Type: CoreOS reserved
-                                    UUID: FBF66043-FC8C-4609-899B-9AD6095AF4CE
-       4857856    12943360       9  Label: "ROOT"
-                                    Type: CoreOS auto-resize
-                                    UUID: 455AF012-4703-49F0-A9A1-3D68A0807B79
-      17805279          32          Sec GPT table
-      17805311           1          Sec GPT header
-  core@coreos1 ~ $ df -h
-  Filesystem      Size  Used Avail Use% Mounted on
-  devtmpfs        485M     0  485M   0% /dev
-  tmpfs           499M     0  499M   0% /dev/shm
-  tmpfs           499M  6.6M  493M   2% /run
-  tmpfs           499M     0  499M   0% /sys/fs/cgroup
-  /dev/vda9       6.0G   13M  5.6G   1% /
-  /dev/vda3       985M  492M  442M  53% /usr
-  /dev/vda1       128M   35M   94M  27% /boot
-  tmpfs           499M     0  499M   0% /media
-  tmpfs           499M     0  499M   0% /tmp
-  /dev/vda6       108M   52K   99M   1% /usr/share/oem
-  config-2        440G  308G  110G  74% /media/configvirtfs
-  </pre>
-- OS file systems
-  - /boot
-    <pre>
+
+##### 1. partitions
+
+    core@coreos1 ~ $ sudo cgpt show /dev/vda
+           start        size    part  contents
+               0           1          Hybrid MBR
+               1           1          Pri GPT header
+               2          32          Pri GPT table
+            4096      262144       1  Label: "EFI-SYSTEM"
+                                      Type: EFI System Partition
+                                      UUID: 4E5F1B27-B7A2-4F17-B1CD-A97A6DE38722
+                                      Attr: Legacy BIOS Bootable
+          266240        4096       2  Label: "BIOS-BOOT"
+                                      Type: BIOS Boot Partition
+                                      UUID: 689F6981-D078-4D19-AD44-A931FB689996
+          270336     2097152       3  Label: "USR-A"
+                                      Type: Alias for coreos-rootfs
+                                      UUID: 7130C94A-213A-4E5A-8E26-6CCE9662F132
+                                      Attr: priority=1 tries=0 successful=1
+         2367488     2097152       4  Label: "USR-B"
+                                      Type: Alias for coreos-rootfs
+                                      UUID: E03DD35C-7C2D-4A47-B3FE-27F15780A57C
+                                      Attr: priority=0 tries=0 successful=0
+         4464640      262144       6  Label: "OEM"
+                                      Type: Alias for linux-data
+                                      UUID: 8C689B68-EF14-4E73-AB41-28C33540ADF4
+         4726784      131072       7  Label: "OEM-CONFIG"
+                                      Type: CoreOS reserved
+                                      UUID: FBF66043-FC8C-4609-899B-9AD6095AF4CE
+         4857856    12943360       9  Label: "ROOT"
+                                      Type: CoreOS auto-resize
+                                      UUID: 455AF012-4703-49F0-A9A1-3D68A0807B79
+        17805279          32          Sec GPT table
+        17805311           1          Sec GPT header
+    core@coreos1 ~ $ df -h
+    Filesystem      Size  Used Avail Use% Mounted on
+    devtmpfs        485M     0  485M   0% /dev
+    tmpfs           499M     0  499M   0% /dev/shm
+    tmpfs           499M  6.6M  493M   2% /run
+    tmpfs           499M     0  499M   0% /sys/fs/cgroup
+    /dev/vda9       6.0G   13M  5.6G   1% /
+    /dev/vda3       985M  492M  442M  53% /usr
+    /dev/vda1       128M   35M   94M  27% /boot
+    tmpfs           499M     0  499M   0% /media
+    tmpfs           499M     0  499M   0% /tmp
+    /dev/vda6       108M   52K   99M   1% /usr/share/oem
+    config-2        440G  308G  110G  74% /media/configvirtfs
+
+##### 2. OS file systems
+
+###### 2.1 /boot
+
     core@coreos1 /boot/coreos $ ls
     grub  vmlinuz-a
     core@coreos1 /boot/coreos $ ls grub/grub.cfg*
     grub/grub.cfg.tar
-    </pre>
-    After untaring, there are there options:
-    <pre>
+
+After untaring, there are there options:
+
     # Assemble the options applicable to all the kernels below
     set linux_cmdline="rootflags=rw mount.usrflags=ro $linux_root $linux_console $first_boot $oem_id $linux_append"
 
@@ -134,22 +140,23 @@ Continous stream of updates
     menuentry "CoreOS USR-B" --id=coreos-b {
        linux$suf /coreos/vmlinuz-b mount.usr=PARTLABEL=USR-B $linux_cmdline
     }
-    </pre>
-  - read-only OS is either on /dev/vda3 or /dev/vda4, mounted under `/usr`
-    <pre>
+
+###### 2.2 /usr
+Read-only OS is either on /dev/vda3 or /dev/vda4, mounted under `/usr`
+
     core@coreos1 /boot/coreos $ mount | grep /usr
     /dev/vda3 on /usr type ext4 (ro,relatime,seclabel)
     /dev/vda6 on /usr/share/oem type ext4 (rw,nodev,relatime,seclabel,commit=600,data=ordered)
-    </pre>
-  - ROOT is writable, /dev/vda9 mounted
-    <pre>
+
+###### 2.3 ROOT
+ROOT is writable, /dev/vda9 mounted
+
     core@coreos1 /boot/coreos $ df -h
     Filesystem      Size  Used Avail Use% Mounted on
     /dev/vda9       6.0G   13M  5.6G   1% /
-    </pre>
 
-    Some are symlinks to read-only /usr:
-    <pre>
+Some are symlinks to read-only /usr:
+
     core@coreos1 /boot/coreos $ ls -l /
     total 68
     lrwxrwxrwx  1 root root     7 Feb 12 03:40 bin -> usr/bin
@@ -187,10 +194,11 @@ Continous stream of updates
     lrwxrwxrwx 1 root root    29 Feb 12 03:40 securetty -> ../usr/share/shadow/securetty
     lrwxrwxrwx 1 root root    30 Feb 12 03:40 shells -> ../usr/share/baselayout/shells
     lrwxrwxrwx 1 root root    33 Feb 12 03:40 sudo.conf -> ../usr/share/baselayout/sudo.conf
-    </pre>
 
-    Others could be created by tempfiles service `coreos-tmpfiles.service`:
-    <pre>
+#### Tempfiles service
+
+Others could be created by tempfiles service `coreos-tmpfiles.service`:
+
     core@coreos1 /usr/lib/systemd/system $ cat coreos-tmpfiles.service
     [Unit]
     Description=Create missing system files
@@ -259,10 +267,9 @@ Continous stream of updates
     Type=oneshot
     RemainAfterExit=yes
     ExecStart=/usr/bin/systemd-tmpfiles --create --remove --boot --exclude-prefix=/dev
-    </pre>
 
-    All the symlinks, directories will be created by tmpfiles service:
-    <pre>
+All the symlinks, directories will be created by tmpfiles service:
+
     core@coreos1 /usr/lib64/tmpfiles.d $ ls
     audit-rules.conf     baselayout-home.conf  ca-certificates.conf  home.conf           libnfsidmap.conf  nfs-utils.conf     shadow.conf           systemd-nspawn.conf  tmp.conf
     base_image_etc.conf  baselayout-ldso.conf  etc.conf              issuegen.conf       libsemanage.conf  ntp.conf           ssh.conf              systemd-remote.conf  update-engine.conf
@@ -302,13 +309,13 @@ Continous stream of updates
 
     f   /var/log/lastlog        -   -   -   -   -
     f   /var/log/faillog        -   -   -   -   -
-    </pre>
 
-  - When and how the coreOS change the boot sequence ?
-    - /var will be overwritten
-      - Cache invalidation ?
-      - Logs not touched
-    - System configs will be changed, (/etc/passwd, /etc/group ...)
-      - How about there needs a change? Like adding a new user during software update,
-        or change configuration format?
-  - grub support tar config ??? 
+#### Techninal Notes
+- When and how the coreOS changes the boot sequence ?
+  - /var will be overwritten
+    - Cache invalidation ?
+    - Logs not touched
+  - System configs will be changed, (/etc/passwd, /etc/group ...)
+    - How about there needs a change? Like adding a new user during software update,
+      or change configuration format?
+- grub support tar config ???
