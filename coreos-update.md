@@ -310,7 +310,7 @@ All the symlinks, directories will be created by tmpfiles service:
     f   /var/log/lastlog        -   -   -   -   -
     f   /var/log/faillog        -   -   -   -   -
 
-#### Techninal Notes
+#### Notes
 - When and how the coreOS changes the boot sequence ?
   - /var will be overwritten
     - Cache invalidation ?
