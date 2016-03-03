@@ -28,7 +28,7 @@ permalink: /coreos
      - `locksmithctl` to change the reboot lock
    - How
      - `update-engine` service do automatic update
-     - Manually tiggering an Update: `update_engine-client - check_for_update`
+     - Manually triggering an Update: `update_engine_client - check_for_update`
      - Create service to make reboot only happen in Maintenance Window
        - XXX: Could be better only do real update in Maintenance Window  
  - Premium Managed Linux customers have access to panel: `CoreUpdate`
@@ -319,3 +319,12 @@ All the symlinks, directories will be created by tmpfiles service:
     - How about there needs a change? Like adding a new user during software update,
       or change configuration format?
 - grub support tar config ???
+- Architecture
+  - Update service with server/client, using dbus to communicate
+    - /usr/sbin/update_engine -foreground -logtostderr
+    - update_engine_client
+    - src: src/third_party/update_engine/
+  - chromeos also has update_engine
+    -  src/platform/system_api/dbus/update_engine/dbus-constants.h
+    - chromiumos/src/third_party/chromiumos-overlay/chromeos-base/update_engine
+    - <https://www.chromium.org/chromium-os/chromiumos-design-docs/boot-design>
