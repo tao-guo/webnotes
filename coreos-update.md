@@ -42,10 +42,10 @@ permalink: /coreos
      - Record `tries` counter in partition table
      - When to set the flag?
 
-####2. Application Code
+#### 2. Application Code
 - Update containers
 
-####3. Configuration Values
+#### 3. Configuration Values
 - Traditionally: `Chef` or `Puppet`, can not audit the state
 - CoreOS uses `etcd`, each application listens the changes
 
