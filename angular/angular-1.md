@@ -69,7 +69,7 @@ title: angular js learning notes
     - 里面提到了why -- web components
     - Also why aurelia ?
 
-- DI
+- DI (Dependency Injection)
   - 需要在框架特别强调吗？
   - 类似Makefie，可以裸写，也可以用cmake更智能的语法，但核心没太大区别
 
