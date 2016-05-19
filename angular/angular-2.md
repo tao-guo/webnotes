@@ -8,14 +8,14 @@ title: angular2 notes
 
 ## <http://angular.io>
 - 跨平台
-  - 网络： progressive web
+  - WEB： progressive web
     - 高性能，离线和不用安装
   - 移动： native mobile
     - Ionic2， NativeScript和React Native
   - 桌面： desktop app
     - Electron-Atom框架 （例如vscode）和原生os的javascript API
 - 性能改进
-  - 采用新web标准： Web Workders
+  - 采用新web标准： Web Workers
     - polymer貌似更进了一步，可以直接采用新API和浏览器渲染web components
     - polymer只用来搭组件，好处是未来有可能去掉中间层js，直接发送并import html就可以使用组件
   - 服务器端渲染
@@ -29,7 +29,7 @@ title: angular2 notes
   - 声明式模板获得IDE支持
   - Angular CLI (ng)
   - [], {}, ()， * 奇怪的语法很容易被识别，及时编译和提示错误
-  - Note: vscode + ng2 基本成ng-conf标配
+  - *vscode + ng2 基本成ng-conf标配
 - 完整开发工具链
   - 单元测试和功能测试： Karma和Protractor
     - 貌似现在测试都有自动识别网页图像，像素级别比较来确定网页是否正常？TODO: link
@@ -111,9 +111,9 @@ title: angular2 notes
 - Glossary
 
 ## DEVELOPER GUIDE
-- Att Directive
+- Attribute Directive
 - Component Styles
-  - 不影响其它
+  - 不影响host
 - Hierarchical Injectors
 - Http Client
 - Lifecycle Hooks
@@ -138,6 +138,13 @@ title: angular2 notes
   - getTitle(), setTitle(newTitle: string)
 - Typescript to javascript
   - 对比和相互如何引用
+
+## 其它
+- 多个components， translute？
+- 使用web components
+- Debug
+  - source.map, chrome
+  - Arguru
 
 ## API Reference
 
