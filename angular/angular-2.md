@@ -125,6 +125,9 @@ title: angular2 notes
 - Typescript Configuration
 - Upgrading
 - Webpack?
+  - 基本配置
+  - 两种模式通过两个配置文件实现
+  - 介绍了各种好用的插件
 
 ## COOKBOOK
 - Component Interaction
